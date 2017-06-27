@@ -69,8 +69,14 @@ the number of keywords.
 This is because the algorithm follows the `fail` links and does not need 
 to try every single character in the input string.
 
-### Assumptions
+### Assumptions and Discussion
 
 - Only works with latin alphabet for now, but support for other language
 is provided as long as the input file is in UTF-8.
 
+- We remove duplicated whitespaces and convert characters to lower-case before feeding
+the input text into the algorithm. This is currently a bit specific for latin alphabet.
+It could be improved further.
+ 
+- In practice, exact matching would not be sufficient. We should be a bit more flexible 
+to deal with typos and different variants of the same concept.
